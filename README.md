@@ -1,36 +1,51 @@
 # HeadAndShoulders
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/head_and_shoulders`. To experiment with that code, run `bin/console` for an interactive prompt.
+HeadAndShoulders sniffs out brittle tests within your RSpec suite when using Parallel Tests.
 
-TODO: Delete this and the text above, and describe your gem
+It uses the Parallel Tests log files to identify groups of seeds and specs that failed on the previous run and runs RSpec bisect on the offending groups.
+
+## Prerequisites
+
+This gem assumes that: you are using the following within your application:
+
+- You are using RSpec
+- You are using Parallel Tests (https://rubygems.org/gems/parallel_tests)
+- You have enabled random spec ordering in RSpec (e.g., you have `config.order = :random` in your RSpec configuration)
+- You are logging failures and parallel spec runs as detailed in the Setup section below
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'head_and_shoulders'
+gem 'head_and_shoulders', git: 'git@github.homedepot.com:Paint/head_and_shoulders.git'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+## Setup
 
-    $ gem install head_and_shoulders
+Add this line to your application's Rakefile:
+
+```ruby
+require 'head_and_shoulders/tasks'
+```
+
+
+And then add the following lines to your '.rspec' configuration file:
+
+```
+--format ParallelTests::RSpec::RuntimeLogger --out tmp/parallel_runtime_rspec.log
+--format ParallelTests::RSpec::FailuresLogger --out tmp/failing_specs.log
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+To bisect a failing parallel spec run, run the following rake task:
 
-## Development
+    $ rake head_and_shoulders:bisect
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/head_and_shoulders.
 
