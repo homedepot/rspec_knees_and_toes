@@ -1,9 +1,9 @@
-require_relative './lib/analyze_parallel_spec_logs'
+require 'analyze_parallel_spec_logs'
 
 namespace :head_and_shoulders do
   desc 'Analyze parallel spec logs and run RSpec bisect on test groups that have failed.'
   task :bisect do
-    print 'Beginning bisect of parallel spec failures...'
+    puts 'Beginning bisect of parallel spec failures.....'
 
     HeadAndShoulders::AnalyzeParallelSpecLogs.new.bisect_parallel_spec_threads
   end
