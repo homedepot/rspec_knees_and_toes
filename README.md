@@ -18,7 +18,7 @@ This gem assumes that: you are using the following within your application:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'head_and_shoulders', git: 'git@github.homedepot.com:Paint/head_and_shoulders.git'
+gem 'head_and_shoulders'
 ```
 
 And then execute:
@@ -47,5 +47,17 @@ To bisect a failing parallel spec run, run the following rake task:
 
     $ rake head_and_shoulders:bisect
 
+
+## Artifactory
+
+To build a new head & shoulders .gem file:
+
+    $ gem build head_and_shoulders.gemspec
+    
+To deploy the new version in artifactory:
+
+- Go to https://rubygems.artifactory.homedepot.com/artifactory/webapp/#/artifacts/browse/tree/General/gems-local/gems/head_and_shoulders-0.1.2.gem
+- Click in Deploy link in the top right
+- Enter `gems-local/gems/` as a target path
 
 
