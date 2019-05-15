@@ -1,1 +1,1 @@
-If you are having trouble using rspec-knees-and-toes, found a bug in the software, or have general comments on the software, please submit it to our issue tracker at https://github.com/homedepot/rspec-knees-and-toes/issues.
+If you are having trouble using rspec_knees_and_toes, found a bug in the software, or have general comments on the software, please submit it to our issue tracker at https://github.com/homedepot/rspec-knees-and-toes/issues.

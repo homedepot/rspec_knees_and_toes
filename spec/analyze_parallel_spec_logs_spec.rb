@@ -2,7 +2,7 @@ require_relative '../lib/analyze_parallel_spec_logs'
 require_relative '../lib/process_lines_between_logged_seeds'
 require_relative '../lib/rspec_bisector'
 
-RSpec.describe HeadAndShoulders::AnalyzeParallelSpecLogs do
+RSpec.describe RSpecKneesAndToes::AnalyzeParallelSpecLogs do
 
   describe '#bisect_parallel_spec_threads' do
     it 'calls the bisector with failing seeds and their spec groups' do

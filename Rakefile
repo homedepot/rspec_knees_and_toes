@@ -1,6 +1,6 @@
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
-require_relative 'lib/head_and_shoulders/tasks'
+require_relative 'lib/rspec_knees_and_toes/tasks'
 
 RSpec::Core::RakeTask.new(:spec)
 

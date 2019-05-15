@@ -1,4 +1,4 @@
-module HeadAndShoulders
+module RSpecKneesAndToes
   class ProcessLinesBetweenLoggedSeeds
     attr_reader :failing_seeds
 

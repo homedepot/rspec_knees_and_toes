@@ -1,6 +1,6 @@
 require_relative '../lib/process_lines_between_logged_seeds'
 
-RSpec.describe HeadAndShoulders::ProcessLinesBetweenLoggedSeeds do
+RSpec.describe RSpecKneesAndToes::ProcessLinesBetweenLoggedSeeds do
 
     let(:processor) { described_class.new }
 

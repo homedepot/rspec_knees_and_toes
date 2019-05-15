@@ -2,7 +2,7 @@ require_relative '../lib/analyze_parallel_spec_logs'
 require_relative '../lib/process_lines_between_logged_seeds'
 require_relative '../lib/rspec_bisector'
 
-module HeadAndShoulders
+module RSpecKneesAndToes
   class AnalyzeParallelSpecLogs
     def initialize(processor: ProcessLinesBetweenLoggedSeeds.new,
                    bisector: RspecBisector.new,

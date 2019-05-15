@@ -1,4 +1,4 @@
-module HeadAndShoulders
+module RSpecKneesAndToes
   class RspecBisector
     def bisect(seed, failures)
       puts "Bisecting test group for failing seed #{seed}"
