@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 require_relative '../lib/analyze_parallel_spec_logs'
 require_relative '../lib/process_lines_between_logged_seeds'
 require_relative '../lib/rspec_bisector'
 
 RSpec.describe RSpecKneesAndToes::AnalyzeParallelSpecLogs do
-
   describe '#bisect_parallel_spec_threads' do
     it 'calls the bisector with failing seeds and their spec groups' do
-
       failing_spec_lines = double(:failing_spec_lines)
       parallel_runtime_lines = double(:parallel_runtime_lines)
       processor = double(:processor)
@@ -42,8 +42,8 @@ RSpec.describe RSpecKneesAndToes::AnalyzeParallelSpecLogs do
 
       analyzer.bisect_parallel_spec_threads
 
-      expect(bisector).to have_received(:bisect).with(FIRST_FAILING_SEED, %w(spec/failing_spec_alpha.rb spec/failing_spec_bravo.rb))
-      expect(bisector).to have_received(:bisect).with(SECOND_FAILING_SEED, %w(spec/failing_spec_charlie.rb spec/failing_spec_delta.rb))
+      expect(bisector).to have_received(:bisect).with(FIRST_FAILING_SEED, %w[spec/failing_spec_alpha.rb spec/failing_spec_bravo.rb])
+      expect(bisector).to have_received(:bisect).with(SECOND_FAILING_SEED, %w[spec/failing_spec_charlie.rb spec/failing_spec_delta.rb])
       expect(bisector).not_to have_received(:bisect).with('12', ['spec/passing_spec.rb'])
       expect(bisector).not_to have_received(:bisect).with('123', ['spec/another_passing_spec.rb'])
     end

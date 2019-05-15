@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpecKneesAndToes
   class ProcessLinesBetweenLoggedSeeds
     attr_reader :failing_seeds

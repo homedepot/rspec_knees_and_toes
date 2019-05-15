@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'analyze_parallel_spec_logs'
 
 namespace :knees_and_toes do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/analyze_parallel_spec_logs'
 require_relative '../lib/process_lines_between_logged_seeds'
 require_relative '../lib/rspec_bisector'
@@ -24,17 +26,15 @@ module RSpecKneesAndToes
 
     def extract_seeds_with_failures
       failing_seeds = []
-      seeds_with_failures = Hash.new {|hash, key| hash[key] = []}
+      seeds_with_failures = Hash.new { |hash, key| hash[key] = [] }
 
       @processor.process_file(@failing_spec_lines) do |line, seed|
-        if /Failures/.match(line)
-          failing_seeds << seed
-        end
+        failing_seeds << seed if /Failures/.match(line)
       end
 
       @processor.process_file(@parallel_runtime_lines) do |line, seed|
-        if /spec\//.match(line) && failing_seeds.include?(seed)
-          seeds_with_failures[seed] << line[0..line.index(':')-1]
+        if %r{spec/}.match(line) && failing_seeds.include?(seed)
+          seeds_with_failures[seed] << line[0..line.index(':') - 1]
         end
       end
 
