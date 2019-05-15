@@ -1,8 +1,10 @@
-# HeadAndShoulders
+# RSpec Knees and Toes
 
 HeadAndShoulders sniffs out brittle tests within your RSpec suite when using Parallel Tests.
 
 It uses the Parallel Tests log files to identify groups of seeds and specs that failed on the previous run and runs RSpec bisect on the offending groups.
+
+RSpec Knees and Toes: Because our first name had a trademark. 
 
 ## Prerequisites
 
