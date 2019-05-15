@@ -1,8 +1,10 @@
-# HeadAndShoulders
+# RSpec Knees and Toes
 
-HeadAndShoulders sniffs out brittle tests within your RSpec suite when using Parallel Tests.
+RSpecKneesAndToes sniffs out brittle tests within your RSpec suite when using Parallel Tests.
 
 It uses the Parallel Tests log files to identify groups of seeds and specs that failed on the previous run and runs RSpec bisect on the offending groups.
+
+RSpec Knees and Toes: Because our first name had a trademark. 
 
 ## Prerequisites
 
@@ -18,7 +20,7 @@ This gem assumes that: you are using the following within your application:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'head_and_shoulders'
+gem 'rspec_knees_and_toes'
 ```
 
 And then execute:
@@ -30,7 +32,7 @@ And then execute:
 Add this line to your application's Rakefile:
 
 ```ruby
-require 'head_and_shoulders/tasks'
+require 'rspec_knees_and_toes/tasks'
 ```
 
 
@@ -45,19 +47,18 @@ And then add the following lines to your '.rspec' configuration file:
 
 To bisect a failing parallel spec run, run the following rake task:
 
-    $ rake head_and_shoulders:bisect
+    $ rake knees_and_toes:bisect
 
+## Build
 
-## Artifactory
+To run tests, just use `rspec`. To build a new knees and toes .gem file:
 
-To build a new head & shoulders .gem file:
+    $ gem build rspec_knees_and_toes.gemspec
 
-    $ gem build head_and_shoulders.gemspec
-    
-To deploy the new version in artifactory:
+## Contributing
 
-- Go to https://rubygems.artifactory.homedepot.com/artifactory/webapp/#/artifacts/browse/tree/General/gems-local/gems/head_and_shoulders-0.1.2.gem
-- Click in Deploy link in the top right
-- Enter `gems-local/gems/` as a target path
+Check out the [contributing](CONTRIBUTING.md) readme for information on how to contribute to the project.
 
+## License 
 
+This project is released under the Apache2 free software license. More information can be found in the [LICENSE](LICENSE) file.
