@@ -2,7 +2,7 @@
 
 First off, thank you for considering contributing to this repository! This resource is a very simple project, but I am sure it has plenty of room for improvement.
 
-If you're just looking for quick feedback for an idea or proposal, feel free to open an [issue](https://github.com/homedepot/rpsec-knees-and-toes/issues/new).
+If you're just looking for quick feedback for an idea or proposal, feel free to open an [issue](https://github.com/homedepot/rspec-knees-and-toes/issues/new).
 
 Follow the [contribution workflow](#contribution-workflow) for submitting your changes.
 
