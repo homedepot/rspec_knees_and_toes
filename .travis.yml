@@ -1,0 +1,8 @@
+language: ruby
+
+rvm:
+  - 2.6.x
+
+branches:
+  only:
+  - master
