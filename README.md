@@ -1,5 +1,7 @@
 # RSpec Knees and Toes
 
+[![Build Status](https://travis-ci.org/homedepot/rspec_knees_and_toes.svg?branch=master)](https://travis-ci.org/homedepot/rspec_knees_and_toes)
+
 RSpecKneesAndToes sniffs out brittle tests within your RSpec suite when using Parallel Tests.
 
 It uses the Parallel Tests log files to identify groups of seeds and specs that failed on the previous run and runs RSpec bisect on the offending groups.
