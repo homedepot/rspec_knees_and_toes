@@ -1,6 +1,7 @@
 # RSpec Knees and Toes
 
-[![Ruby Version](https://img.shields.io/badge/ruby-2.6.3-00ADD8.svg?style=flat)](https://www.ruby-lang.org/en/) 
+[![Ruby Version](https://img.shields.io/badge/ruby-2.6.3-00ADD8.svg?style=flat)](https://www.ruby-lang.org/en/)
+[![Gem Version](https://badge.fury.io/rb/rspec_knees_and_toes.svg)](https://badge.fury.io/rb/rspec_knees_and_toes)
 [![Code Coverage](https://img.shields.io/codecov/c/github/homedepot/rspec_knees_and_toes.svg?style=flat)](https://codecov.io/gh/homedepot/rspec_knees_and_toes)
 [![Build Status](https://travis-ci.org/homedepot/rspec_knees_and_toes.svg?branch=master)](https://travis-ci.org/homedepot/rspec_knees_and_toes)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat)](LICENSE)
