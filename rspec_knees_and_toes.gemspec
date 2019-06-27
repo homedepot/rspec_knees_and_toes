@@ -8,6 +8,7 @@ require 'rspec_knees_and_toes/version'
 Gem::Specification.new do |spec|
   spec.name          = 'rspec_knees_and_toes'
   spec.version       = RSpecKneesAndToes::VERSION
+  spec.licenses      = ['Apache-2.0']
   spec.authors       = ['James A. Hall', 'Winston R. Milling']
   spec.email         = [
     'James_A_Hall@homedepot.com',
@@ -22,8 +23,8 @@ Gem::Specification.new do |spec|
   spec.executables   = []
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '>= 1.11'
-  spec.add_development_dependency 'codecov'
+  spec.add_development_dependency 'bundler', '~> 2.0'
+  spec.add_development_dependency 'codecov', '~> 0.1'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
